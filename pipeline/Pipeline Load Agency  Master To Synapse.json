@@ -1,0 +1,41 @@
+{
+	"name": "Pipeline Load Agency  Master To Synapse",
+	"properties": {
+		"activities": [
+			{
+				"name": "LoadAgency",
+				"type": "ExecuteDataFlow",
+				"dependsOn": [],
+				"policy": {
+					"timeout": "0.12:00:00",
+					"retry": 0,
+					"retryIntervalInSeconds": 30,
+					"secureOutput": false,
+					"secureInput": false
+				},
+				"userProperties": [],
+				"typeProperties": {
+					"dataflow": {
+						"referenceName": "LoadAgency",
+						"type": "DataFlowReference"
+					},
+					"staging": {
+						"linkedService": {
+							"referenceName": "LinkedService_DataLake",
+							"type": "LinkedServiceReference"
+						},
+						"folderPath": "adlsnycpayroll-emmanuel-a/dirstaging"
+					},
+					"compute": {
+						"coreCount": 8,
+						"computeType": "General"
+					},
+					"traceLevel": "Fine"
+				}
+			}
+		],
+		"annotations": [],
+		"lastPublishTime": "2023-07-31T18:08:35Z"
+	},
+	"type": "Microsoft.DataFactory/factories/pipelines"
+}

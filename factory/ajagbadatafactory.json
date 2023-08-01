@@ -1,0 +1,9 @@
+{
+	"name": "ajagbadatafactory",
+	"location": "southafricanorth",
+	"identity": {
+		"type": "SystemAssigned",
+		"principalId": "6b97a492-a2cc-4701-b0bc-885b2c1d64f9",
+		"tenantId": "cd6683a6-aa85-46cf-aeea-92d4a1477009"
+	}
+}
